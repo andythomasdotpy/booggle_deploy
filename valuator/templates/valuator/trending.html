@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Booggle | Trending
+{% endblock %}
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static "valuator/trending.css" %}">
+{% endblock %}
+
+
+{% block context %}
+<div class="container-fluid">
+    <div class="container mt-5 text-center">
+        <h1>🔥Trending🔥</h1>
+    </div>
+    <div class="row all-blocks">
+        {% for bottle, url in all_bottles.items %} 
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center each-item">
+                <a href="bottle_details_trending/{{bottle}}">
+                    <img src="{{ url }}" class="img-main">
+                    <p class="text-center bottle-title">{{ bottle }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

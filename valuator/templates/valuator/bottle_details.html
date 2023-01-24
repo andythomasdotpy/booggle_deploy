@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Booggle | Prices
+{% endblock %}
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static "valuator/bottle_details.css" %}">
+{% endblock %}
+
+{% block context %}
+    <section class="section-formatting container-fluid">
+        <div class="text-center bottle-image">
+            <h1>{{ sales_data_list.0.0 }}</h1>
+            <img src="{{ sales_data_list.0.3 }}" alt="Main Image">
+        </div>
+        <div class="section-chart container-fluid">
+            <div class="text-center mt-4">
+                <p>Trouble viewing chart on mobile? Try rotating your phone 🔄</p>
+            </div>
+            {{ chart|safe }}
+        </div>
+        <div class="section-chart container-fluid">
+            <div class="text-center mt-4">
+                <p>Trouble viewing chart on mobile? Try rotating your phone 🔄</p>
+            </div>
+            {{ chart_1|safe }}
+        </div>
+        <div class="prices-chart container-fluid">
+            <h3> All Sales </h3>
+            <table>
+                {% for sale in sales_data_list %}
+                <tr>
+                    <td>{{ sale.2 }}</td>
+                    <td>{{ sale.1 }}</td>
+                    <td>{{ sale.0 }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+{% endblock %}

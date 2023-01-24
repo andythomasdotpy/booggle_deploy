@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Booggle | No Results
+{% endblock %}
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static "valuator/no_results_find.css" %}">
+{% endblock %}
+
+{% block context %}
+    <div class="main-div">
+        <h3> Sorry, we didn't find any results matching your request... <a href="{% url "search" %}">search again</a></h3>
+    </div>
+{% endblock %}

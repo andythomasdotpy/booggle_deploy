@@ -1,0 +1,55 @@
+.main-div {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 4rem;
+}
+
+/* .inline {
+    display: inline;
+    } */
+
+.link-button {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: serif;
+    vertical-align: auto;
+    }
+
+.link-button:focus {
+    outline: none;
+    }
+
+.link-button:active {
+    color:red;
+    }
+
+.result-div {
+    text-align: center;
+    overflow: hidden;
+    border-style: solid;
+    border-radius: 16px;
+    border: 1px solid #ccc!important;
+    height: auto;
+    position: relative;
+    border: 3px solid green;
+    margin: 30px auto;
+    }
+
+.link-div {
+    /* margin: 0; */
+    /* position: absolute; */
+    top: 90%;
+    left: auto;
+    right: auto;
+}
+
+.bottle-image {
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+}
+

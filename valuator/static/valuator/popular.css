@@ -1,0 +1,23 @@
+.center-box {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    padding-bottom: 6px;
+    /* border: 1px solid lightgray; */
+  }
+
+
+.main-div {
+    border: 1px solid lightgray;
+    border-radius: .5rem;
+    margin: 5px 5px;
+}
+
+.div-li {
+    border: 1px solid lightgray;
+    border-radius: .5rem;
+    padding: 4px;
+}
+
+

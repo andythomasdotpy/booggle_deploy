@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Booggle | Popular
+{% endblock %}
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static "valuator/popular.css" %}">
+{% endblock %}
+
+
+{% block context %}
+<div class="container mb-5">
+    <h1 class="text-center mt-4 mb-4">Popular</h1>
+
+    <div class="row">
+        <div class="main-div col-12 col-md-6">
+            <h3 class="text-center pt-2">The Van Winkles</h3>
+            <div class="center-box">
+                <a href="search-results/Old Rip Van Winkle 10"><li class="div-li">Old Rip Van Winkle 10</li></a>
+                <a href="search-results/Pappy Van Winkle 12"><li class="div-li">Pappy Van Winkle 12</li></a>
+                <a href="search-results/Pappy Van Winkle 15"><li class="div-li">Pappy Van Winkle 15</li></a>
+                <a href="search-results/Pappy Van Winkle 18"><li class="div-li">Pappy Van Winkle 18</li></a>
+                <a href="search-results/Pappy Van Winkle 23"><li class="div-li">Pappy Van Winkle 23</li></a>
+            </div>
+        </div>
+        <div class="main-div col">
+            <h3 class="text-center pt-2">Springbank</h3>
+            <div class="center-box">
+                <a href="search-results/Springbank 25"><li class="div-li">Springbank 25 Years Old</li></a>
+                <a href="search-results/Springbank 21"><li class="div-li">Springbank 21 Years Old</li></a>
+                <a href="search-results/Hazelburn 21"><li class="div-li">Hazelburn 21 Years Old</li></a>
+                <a href="search-results/Longrow 21"><li class="div-li">Longrow 21 Years Old</li></a>
+                <a href="search-results/Springbank 17 Madeira"><li class="div-li">Springbank 17 Madeira</li></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="main-div col col-12 col-md-6">
+            <h3 class="text-center pt-2">US Other</h3>
+            <div class="center-box">
+                <a href="search-results/Michter's 20 Year Old"><li class="div-li">Michter's 20 Year Old</li></a>
+                <a href="search-results/Booker's 30th"><li class="div-li">Booker's 30th</li></a>
+                <a href="search-results/Wild Turkey Master's Keep"><li class="div-li">Four Roses</li></a>
+                <a href="search-results/William Heavenhill"><li class="div-li">William Heavenhill</li></a>
+                <a href="search-results/Booker's Rye"><li class="div-li">Booker's Rye</li></a>
+            </div>
+        </div>
+        <div class="main-div col pt-2">
+            <h3 class="text-center">Non-US Other</h3>
+            <div class="center-box">
+                <a href="search-results/Macallan 25 Year Old"><li class="div-li">Macallan 25 Year Old</li></a>
+                <a href="search-results/Macallan Reflexion"><li class="div-li">Macallan Reflexion</li></a>
+                <a href="search-results/Redbreast Dream Cask"><li class="div-li">Redbreast Dream Cask</li></a>
+                <a href="search-results/Knappogue Castle 36"><li class="div-li">Knappogue Castle 36</li></a>
+                <a href="search-results/Midleton Very Rare 2017"><li class="div-li">Midleton Very Rare 2017</li></a>
+            </div>
+        </div>
+    </div>
+    <div class="row"></li>
+        <div class="main-div col col-12 col-md-6">
+            <h3 class="text-center pt-2">Buffalo Trace</h3>
+            <div class="center-box">
+                <a href="search-results/George T Stagg"><li class="div-li">George T Stagg</li></a>
+                <a href="search-results/William Larue Weller"><li class="div-li">William Larue Weller</li></a>
+                <a href="search-results/Thomas H Handy"><li class="div-li">Thomas H Handy</li></a>
+                <a href="search-results/Eagle Rare 17"><li class="div-li">Eagle Rare 17</li></a>
+                <a href="search-results/Sazerac 18<"><li class="div-li">Sazerac 18</li></a>
+            </div>
+        </div>
+        <div class="main-div col">
+            <h3 class="text-center pt-2">Japanese</h3>
+            <div class="center-box">
+                <a href="search-results/Hibiki 21"><li class="div-li">Hibiki 21 Years Old</li></a>
+                <a href="search-results/Yamazaki 25"><li class="div-li">Yamazaki 25Years Old</li></a>
+                <a href="search-results/Yamazaki 18"><li class="div-li">Yamazaki 18Years Old</li></a>
+                <a href="search-results/Hakushu 25"><li class="div-li">Hakushu 25Years Old</li></a>
+                <a href="search-results/Hakushy 18"><li class="div-li">Hakushu 18Years Old</li></a>
+            </div>
+        </div>
+    </div> 
+</div>    
+
+{% endblock %}
