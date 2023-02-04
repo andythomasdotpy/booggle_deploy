@@ -13,7 +13,7 @@
 
 {% block context %}
     <div class="form-div container">
-        <form action="{% url "search-results" %}" method="POST">
+        <form action="{% url "search-results" %}" method="POST" class="form-parent">
             <h1 class="booggle-h1 mb-3">
                 <span style="color:#4c8bf5">B</span>
                 <span style="color:#de5246">o</span>
@@ -24,7 +24,8 @@
                 <span style="color:#4c8bf5">e</span><br>
             </h1>
             {% csrf_token %}
-            <input class="form-search-box" type="text" id="fname" name="search_box" placeholder="🔍 Search Booggle">
+            <button class="search-btn">🔍</button>
+            <input class="form-search-box" type="text" id="fname" name="search_box" placeholder="Search Booggle">
         </form>
         <p class="mt-4">
             Search a bottle in the field above or select a bottle from the "trending" or "popular" links in the navigation bar.
