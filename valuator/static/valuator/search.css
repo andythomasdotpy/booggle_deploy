@@ -8,7 +8,7 @@
     text-align: center;
   }
 
-.form-search-box {
+/* .form-search-box {
     border-radius: 0px 50px 50px 0px;
     width: 85%;
     height: 2.5rem;
@@ -17,17 +17,37 @@
     max-width: 450px;
     font-size: 14px;
     border-left: none;
+} */
+
+/* .input-style {
+    border-radius: 150px;
+    border: 1px solid black;
+} */
+
+/* .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: calc(var(--bs-border-width) * -1);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
 }
+
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control, .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select, .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+} */
 
 .booggle-h1 {
     font-size: 5rem;
 }
 
-.booggle-h1 span {
+/* .booggle-h1 span {
     font-size: 4rem; 
     padding: 0px 0px;
     margin: -8px;
-}
+} */
 
 .search-btn {
     height: 2.5rem;
@@ -41,7 +61,7 @@
 }
 
 .form-parent {
-    font-size: 0px;
+    font-size: 12px;
 }
 
 input:focus {
@@ -59,3 +79,34 @@ input:focus {
         width: 160px;
     }
 }
+
+
+.form {
+    display: flex;
+    flex-direction: row;
+  }
+  .search-field {
+    width: 100%;
+    padding: 10px 35px 10px 15px;
+    border: 1px solid black;
+    border-radius: 100px;
+    outline: none;
+    background-color: white;
+    width: 85%;
+    height: 2.5rem;
+
+  }
+  
+  .search-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: -33px;
+    cursor: pointer;
+  }
+  
+  .search-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
