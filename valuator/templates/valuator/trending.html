@@ -12,8 +12,8 @@
 
 
 {% block context %}
-<div class="container-fluid">
-    <div class="container mt-5 text-center">
+{% comment %} <div class="container-fluid">
+    <div class="container text-center">
         <h1>🔥Trending🔥</h1>
     </div>
     <div class="row all-blocks">
@@ -26,5 +26,22 @@
             </div>
         {% endfor %}
     </div>
+</div> {% endcomment %}
+
+<div class="container mt-5 text-center">
+    <h1>🔥Trending🔥</h1>
 </div>
+<div class="container-fluid mt-5 container-spacing">
+    <div class="row justify-content-md-center mb-5">
+        {% for bottle, url in all_bottles.items %} 
+            <div class="col-lg-3 col-md-6 col-sm-6 div-spacing text-center">
+                <a href="bottle_details_trending/{{bottle}}">
+                    <img src="{{ url }}" >
+                    <p>{{bottle}}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
 {% endblock %}

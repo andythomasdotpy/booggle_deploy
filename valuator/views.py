@@ -93,7 +93,7 @@ def trending(request):
     context = {"all_bottles": dict_5_no_dups}
 
     # return render(request, "valuator/trending.html", context=context)
-    return render(request, "valuator/index.html", context=context)
+    return render(request, "valuator/trending.html", context=context)
 
 
 
@@ -103,6 +103,7 @@ def bottle_details_trending(request, mid):
 
     # Add actual bottle lookup to database
     actual = ActualBottle()
+    print(actual)
     actual.actual_bottle = mid.title()
     actual.photo_url = sales_data_list[0][3]
     actual.date_created = datetime.now()
