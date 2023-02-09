@@ -2,6 +2,9 @@ from django.urls import path
 
 from . import views
 
+from django.contrib.staticfiles.storage import staticfiles_storage
+from django.views.generic.base import RedirectView
+
 urlpatterns = [
     path("", views.search, name="search"),
     path("search-results", views.SearchResultsView.as_view(), name="search-results"),
@@ -11,4 +14,5 @@ urlpatterns = [
     path("popular/",views.popular, name="popular"),
     path("popular/search-results/<str:popular>/", views.search_results_popular, name="search-results-pop"),
     path("spinner/", views.PostTemplateView.as_view(), name="spinner-view"),
+    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico'))),
 ]
