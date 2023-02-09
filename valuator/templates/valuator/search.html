@@ -14,15 +14,7 @@
 {% block context %}
     <div class="form-div container">
         <div class="container1">
-            <h1 class="booggle-h1 mb-3">
-                <span style="color:#4c8bf5">B</span>
-                <span style="color:#de5246">o</span>
-                <span style="color:#ffce44">o</span>
-                <span style="color:#4c8bf5">g</span>
-                <span style="color:#1aa260">g</span>
-                <span style="color:#de5246">l</span>
-                <span style="color:#4c8bf5">e</span><br>
-            </h1>
+            <img class="main-img mb-4" src="{{ single_bottle }}" alt="main-img" >
             <form action="{% url "search-results" %}" method="POST" class="form">
                 {% csrf_token %}
                 <input type="text" name="search_box" placeholder="Search Booggle" class="search-field" />

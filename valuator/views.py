@@ -16,7 +16,13 @@ from .operations.create_charts_func import scatter_plot_function, line_chart_fun
 
 def search(request):
     # return HttpResponse("You are at home...")
-    return render(request, "valuator/search.html")
+    all_bottles = ActualBottle.objects.all().order_by('-date_created')
+    single_bottle = all_bottles[:1][0]
+    print(single_bottle.photo_url)
+    
+    context = {"single_bottle": single_bottle.photo_url}
+
+    return render(request, "valuator/search.html", context)
 
 
 class SearchResultsView(View):
