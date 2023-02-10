@@ -20,7 +20,7 @@ def search(request):
     single_bottle = all_bottles[:1][0]
     print(single_bottle.photo_url)
     
-    context = {"single_bottle": single_bottle.photo_url}
+    context = {"single_bottle": single_bottle}
 
     return render(request, "valuator/search.html", context)
 
@@ -87,7 +87,7 @@ def trending(request):
 
     for bottles in all_bottles:
         dict_5_no_dups[bottles.actual_bottle] = bottles.photo_url
-        if len(dict_5_no_dups) >= 4:
+        if len(dict_5_no_dups) >= 8:
             break
 
     print()
