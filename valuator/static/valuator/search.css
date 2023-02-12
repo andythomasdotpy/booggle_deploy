@@ -4,6 +4,7 @@
 
 .main-img {
     width: 250px;
+    border-radius: 50%;
 }
 
 .form {
