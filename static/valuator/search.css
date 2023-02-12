@@ -2,6 +2,10 @@
     font-size: 5rem;
 }
 
+.main-img {
+    width: 250px;
+}
+
 .form {
     display: flex;
     flex-direction: row;
@@ -69,4 +73,16 @@ input:-webkit-autofill:active{
 
 .img-spacing {
     padding-right: 7px;
+}
+
+@media (max-width: 500px) {
+    .main-img {
+        width: 185px;
+    }
+}
+
+@media (max-width: 380px) {
+    .main-img {
+        width: 160px;
+    }
 }
