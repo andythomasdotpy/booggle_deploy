@@ -16,16 +16,14 @@
     margin-right: auto;
     max-width: 500px;
     border: 1px solid rgb(225, 220, 220);
+    box-shadow: 0px 0px 2px 2px rgb(240, 237, 237);
 }
 
-.form:hover {
-    box-shadow: 0px 0px 2px 2px rgb(240, 237, 237); /*any color you want*/
-}
 
 
 .search-field {
     width: 100%;
-    padding: 10px 35px 10px 25px;
+    padding: 9px 35px 9px 25px;
     border: none;
     border-radius: 100px;
     outline: none;
@@ -73,7 +71,7 @@ input:-webkit-autofill:active{
 }
 
 .img-spacing {
-    padding-right: 7px;
+    padding-right: 6px;
 }
 
 @media (max-width: 500px) {
