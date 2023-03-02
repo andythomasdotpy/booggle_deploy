@@ -22,4 +22,6 @@
     margin-right: auto;
 }
 
-
+.nav-link:hover{
+    text-decoration: underline;
+}

@@ -41,3 +41,7 @@ img {
     padding-right: 24px;
     padding-left: 24px;
 }
+
+.nav-link:hover{
+    text-decoration: underline;
+}
