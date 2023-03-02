@@ -1,3 +1,27 @@
+body{
+    font-family: Roboto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#main-heading{
+    font-weight: 300px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100vh;
+    border: 1px solid rgb(105, 103, 103);
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgb(131, 130, 130);
+    margin: auto;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
 .item-div {
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -25,17 +49,12 @@ bottle-title {
     margin-top: 40px;
 }
 
-img {
-    max-width: 100%;
-    max-height: 100vh;
-    margin: auto;
-    padding-bottom: 20px;
-}
-
 .div-spacing {
     padding-top: 12px;
     padding-bottom: 12px;
+    /* border: 1px solid black; */
 }
+
 
 .container-spacing {
     padding-right: 24px;
@@ -44,4 +63,8 @@ img {
 
 .nav-link:hover{
     text-decoration: underline;
+}
+
+.bottle-info-anchortag{
+    border: 1px solid black;
 }
