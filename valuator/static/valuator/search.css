@@ -74,6 +74,10 @@ input:-webkit-autofill:active{
     padding-right: 6px;
 }
 
+.nav-link:hover{
+    text-decoration: underline;
+}
+
 @media (max-width: 500px) {
     .main-img {
         width: 185px;
