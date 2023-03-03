@@ -1,3 +1,8 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .center-box {
     width: fit-content;
     margin-left: auto;
@@ -12,8 +17,19 @@
 }
 
 .div-li {
-    border-radius: .5rem;
+    border-radius: 3px;
     padding: 4px;
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 0px 2px 2px 2px darkgrey;
+    background: rgb(37, 153, 241);
+    color: white;
+}
+
+.div-li:hover{
+    box-shadow: 0px 2px 2px 2px rgb(105, 104, 104);
 }
 
 .h3-box {
@@ -24,4 +40,20 @@
 
 .nav-link:hover{
     text-decoration: underline;
+}
+
+footer > div{
+    border-top: 1px solid rgb(195, 192, 192);
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 22px;
+}
+
+p{
+    text-align: center;
+    color: rgb(90, 88, 88);
+}
+
+footer{
+    height: 80px;
 }
