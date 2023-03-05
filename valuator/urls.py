@@ -1,3 +1,4 @@
+from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView
 from django.urls import path
 
 from . import views
@@ -14,5 +15,7 @@ urlpatterns = [
     path("popular/",views.popular, name="popular"),
     path("popular/search-results/<str:popular>/", views.search_results_popular, name="search-results-pop"),
     path("spinner/", views.PostTemplateView.as_view(), name="spinner-view"),
+    path("login", LoginView.as_view(), name="login"),
+    # path('logout', LogoutView.as_view(), name='logout'),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico'))),
 ]
