@@ -6,6 +6,8 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
 
+
+from .forms import UserRegistrationForm
 from.models import SearchInput, ActualBottle
 from .operations.bot_search_results import bot_find_search_results
 from .operations.bot_scrape_data import bottle_results_bot
@@ -160,3 +162,26 @@ def search_results_popular(request, popular):
 
 class PostTemplateView(TemplateView):
     template_name = "valuator/spinner.html"
+
+
+def register(request):
+    if request.method == "POST":
+        user_form = UserRegistrationForm(request.POST)
+
+        if user_form.is_valid():
+
+            # Create new user object but don't save yet. Check passwords.
+            new_user = user_form.save(commit=False)
+
+            # Set password
+            new_user.set_password(user_form.cleaned_data["password_1"])
+            new_user.save()
+            content = {"user_form": user_form}
+
+            return render(request, "account/register_done.html", content)
+
+    else:
+        user_form = UserRegistrationForm()
+        {"user_form": user_form}
+
+    return render(request, "account/register.html", {"user_form": user_form})
