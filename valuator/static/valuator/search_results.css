@@ -6,6 +6,7 @@ button{
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 4rem;
+    min-height: calc(100vh - 400px);
 }
 
 /* .inline {
@@ -53,7 +54,7 @@ button{
     border: 3px solid green;
     margin: 30px auto;
     max-width: 380px;
-    box-shadow: 1px 4px 5px 3px grey;
+    box-shadow: 1px 4px 15px 3px grey;
     }
 
 .link-div {
