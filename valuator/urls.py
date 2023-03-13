@@ -20,6 +20,5 @@ urlpatterns = [
     path("register", views.register, name="register"),
     path("password-change/", PasswordChangeView.as_view(), name="password-change"),
     path("password-change/done/", PasswordChangeDoneView.as_view(), name="password_change_done"),
-    # path('logout', LogoutView.as_view(), name='logout'),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico'))),
 ]
