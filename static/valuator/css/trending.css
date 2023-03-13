@@ -1,0 +1,93 @@
+body{
+    font-family: Roboto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    text-align: center;
+    color: rgb(90, 88, 88);
+}
+
+footer{
+    height: 80px;
+}
+
+footer > div{
+    border-top: 1px solid rgb(195, 192, 192);
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 22px;
+}
+
+#main-heading{
+    font-weight: 500px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100vh;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 8px 17px 3px rgb(131, 130, 130); */
+    /* box-shadow: 0 8px 17px 3px rgb(169, 167, 167); */
+    margin: auto;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.item-div {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.img-main {
+    margin-top: 1rem;
+    height: 12rem;
+    width: 10rem;
+}
+
+.all-blocks {
+    margin: 3rem 0px 0px 0px;
+}
+
+.each-item {
+    border: .5px solid lightgray;
+    border-radius: 1rem;
+    margin: 1rem 0px;
+}
+
+bottle-title {
+    margin-top: 40px;
+}
+
+.div-spacing {
+    /* padding-top: 32px;
+    padding-bottom: 12px; */
+    padding: 32px 25px 12px 10px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin: 50px;
+    box-shadow: 0 8px 17px 3px rgb(169, 167, 167);
+}
+
+.div-spacing:hover {
+    box-shadow: 0 8px 10px 3px rgb(104, 102, 102);
+}
+
+.container-spacing {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+}
+
+.bottle-info-anchortag{
+    border: 1px solid black;
+}

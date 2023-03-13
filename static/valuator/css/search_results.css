@@ -1,0 +1,88 @@
+button{
+    text-decoration: none;
+}
+
+.main-div {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 4rem;
+    min-height: calc(100vh - 400px);
+}
+
+/* .inline {
+    display: inline;
+    } */
+
+.link-button {
+    background: rgb(37, 153, 241);
+    border: none;
+    border-radius: 5px;
+    color: blue;
+    /* text-decoration: underline; */
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: serif;
+    vertical-align: auto;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: roboto, sans-serif;
+    padding: 10px;
+    max-width: 80%;
+    }
+
+.link-button:hover{
+    background: rgb(118, 184, 235);
+}
+
+.link-button:focus {
+    outline: none;
+    }
+
+.link-button:active {
+    color:red;
+    }
+
+.result-div {
+    text-align: center;
+    overflow: hidden;
+    border-style: solid;
+    border-radius: 6px;
+    border: 1px solid #ccc!important;
+    height: auto;
+    position: relative;
+    border: 3px solid green;
+    margin: 30px auto;
+    max-width: 380px;
+    box-shadow: 1px 4px 15px 3px grey;
+    }
+
+.link-div {
+    /* margin: 0; */
+    /* position: absolute; */
+    top: 90%;
+    left: auto;
+    right: auto;
+}
+
+.bottle-image {
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+}
+
+footer > div{
+    border-top: 1px solid rgb(195, 192, 192);
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 22px;
+}
+
+p{
+    text-align: center;
+    color: rgb(90, 88, 88);
+}
+
+footer{
+    height: 80px;
+}
