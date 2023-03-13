@@ -6,12 +6,12 @@
 {% endblock %}
 
 {% block css_styles %}
-    {% comment %} <link rel="stylesheet" href="{% static "blog_app/css/register.css" %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static "valuator/css/register.css" %}">
 {% endblock %}
 
 
 {% block content %}
-    <div class="container text-center mt-5">
+    <div class="container text-center main-div loggedOut">
         <h1>Welcome!</h1>
         <p>Your account has been created. Click here to <a href="{% url "login" %}">login</a></p>
     </div>
