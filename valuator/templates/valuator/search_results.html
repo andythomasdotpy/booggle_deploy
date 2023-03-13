@@ -5,12 +5,11 @@
     Booggle | Results
 {% endblock %}
 
-
 {% block css_styles %}
-    <link rel="stylesheet" href="{% static "valuator/search_results.css" %}">
+    <link rel="stylesheet" href="{% static "valuator/css/search_results.css" %}">
 {% endblock %}
 
-{% block context %}
+{% block content %}
     <div class="main-div">
         <h3 class="mt-5 mb-5 text-center"> Select vintage to view pricing data </h3>
         {% for bottles in search_bot_list %}

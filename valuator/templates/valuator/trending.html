@@ -7,30 +7,29 @@
 {% endblock %}
 
 {% block css_styles %}
-    <link rel="stylesheet" href="{% static "valuator/trending.css" %}">
+    <link rel="stylesheet" href="{% static "valuator/css/trending.css" %}">
 {% endblock %}
 
 
-{% block context %}
-<div class="container mt-5 text-center">
-    <h1 id="main-heading">Trending</h1>
-</div>
-<div class="container-fluid mt-5 container-spacing">
-    <div class="row justify-content-md-center mb-5">
-        {% for bottle, url in all_bottles.items %} 
-            <div class="col-lg-3 col-md-6 col-sm-6 div-spacing text-center">
-                <p>{{bottle}}</p>
-                <a href="bottle_details_trending/{{bottle}}">
-                    <img src="{{ url }}" >
-                </a>
-            </div>
-        {% endfor %}
+{% block content %}
+    <div class="container mt-5 text-center">
+        <h1 id="main-heading">Trending</h1>
     </div>
-</div>
-<footer>
-    <div>
-        <p>booggle-finance.com</p>
+    <div class="container-fluid mt-5 container-spacing">
+        <div class="row justify-content-md-center mb-5">
+            {% for bottle, url in all_bottles.items %} 
+                <div class="col-lg-3 col-md-6 col-sm-6 div-spacing text-center">
+                    <p>{{bottle}}</p>
+                    <a href="bottle_details_trending/{{bottle}}">
+                        <img src="{{ url }}" >
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-</footer>
-
+    <footer>
+        <div>
+            <p>booggle-finance.com</p>
+        </div>
+    </footer>
 {% endblock %}
