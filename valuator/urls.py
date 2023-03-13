@@ -16,8 +16,10 @@ urlpatterns = [
     path("popular/search-results/<str:popular>/", views.search_results_popular, name="search-results-pop"),
     path("spinner/", views.PostTemplateView.as_view(), name="spinner-view"),
     path("login", LoginView.as_view(), name="login"),
+    path('logout', LogoutView.as_view(), name='logout'),
     path("register", views.register, name="register"),
-
+    path("password-change/", PasswordChangeView.as_view(), name="password-change"),
+    path("password-change/done/", PasswordChangeDoneView.as_view(), name="password_change_done"),
     # path('logout', LogoutView.as_view(), name='logout'),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico'))),
 ]

@@ -17,21 +17,40 @@
   
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto ">
+            {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link active nav-bar-txt disabled" href="">Hi, {{ request.user.username }}</a>
+                </li>
+            {% endif %}
+
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url "search" %}">Search</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="{% url "trending" %}" >Trending</a>
             </li>
-            <li class="nav-item">
+            {% comment %} <li class="nav-item">
               <a class="nav-link active" href="{% url "popular" %}">Popular</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="{% url "register" %}">Register</a>
-            </li>
-            <li class="nav-item">
+            </li> {% endcomment %}
+            
+            {% if request.user.is_authenticated %}
+                <li>
+                    <a class="nav-link active" href="{% url "password-change" %}">Change Password</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url "logout" %}">Logout</a>
+                </li>
+
+
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url "register" %}">Register/Login</a>
+                </li>
+            {% endif %}
+
+            {% comment %} <li class="nav-item">
                 <a class="nav-link active" href="#">About Us</a>
-            </li>
+            </li> {% endcomment %}
         </ul>
       </div>
     </div>
