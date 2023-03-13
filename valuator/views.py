@@ -8,7 +8,7 @@ from django.views.generic import View, TemplateView
 
 
 from .forms import UserRegistrationForm
-from.models import SearchInput, ActualBottle
+from .models import SearchInput, ActualBottle
 from .operations.bot_search_results import bot_find_search_results
 from .operations.bot_scrape_data import bottle_results_bot
 from .operations.create_charts_func import scatter_plot_function, line_chart_function, seaborn_chart
