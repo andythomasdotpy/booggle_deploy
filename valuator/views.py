@@ -89,7 +89,7 @@ def trending(request):
 
     for bottles in all_bottles:
         dict_5_no_dups[bottles.actual_bottle] = bottles.photo_url
-        if len(dict_5_no_dups) >= 8:
+        if len(dict_5_no_dups) >= 12:
             break
 
     print()
