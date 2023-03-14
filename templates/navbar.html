@@ -23,11 +23,6 @@
   
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto ">
-            {% comment %} {% if request.user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link active nav-bar-txt disabled" href="">Hi, {{ request.user.username }}</a>
-                </li>
-            {% endif %} {% endcomment %}
 
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url "search" %}">Search</a>
@@ -35,9 +30,6 @@
             <li class="nav-item">
               <a class="nav-link active" href="{% url "trending" %}" >Trending</a>
             </li>
-            {% comment %} <li class="nav-item">
-              <a class="nav-link active" href="{% url "popular" %}">Popular</a>
-            </li> {% endcomment %}
             
             {% if request.user.is_authenticated %}
                 <li class="nav-item dropdown">
@@ -48,7 +40,7 @@
                     <li>
                         <a class="dropdown-item" href="{% url "password-change" %}">Change Password</a>
                     </li>
-                    <li><a class="dropdown-item" href="#">My Favorites</a></li>
+                    <li><a class="dropdown-item" href="{% url "favorites" %}">My Favorites</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li class="nav-item">
                         <a class="dropdown-item" href="{% url "logout" %}">Logout</a>
