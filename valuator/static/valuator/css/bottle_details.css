@@ -19,6 +19,12 @@ table{
     margin-right: auto;
 }
 
+.bottle-image > img{
+    box-shadow: 5px 5px 30px 5px rgb(78, 77, 77);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
 .aTagButtonDiv{
     width: 300px;
     text-align: left;
