@@ -1,5 +1,30 @@
 /* Booggle logo top left navbar is sytled in navbar.html */
 
-#navColor{
-    font-family: Roboto, sans-serif;
+body #navColor{
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+}
+
+.navbar-brand span{
+    margin:-2.5px; 
+    font-size:30px; 
+    font-weight: 400;
+}
+
+nav div a .colorBlue{
+    color:#4c8bf5;
+}
+
+nav div a .colorRed{
+    color:#de5246;
+}
+
+nav div a .colorYellow{
+    color:#ffce44;
+}
+
+nav div a .colorGreen{
+    color:#1aa260;
 }

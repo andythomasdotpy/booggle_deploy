@@ -7,15 +7,14 @@
 
 <nav id="navColor" class="navbar navbar-expand-lg bg-white">
     <div class="container">
-      <a class="navbar-brand"" href="{% url "search" %}">
-        <span style="color:#4c8bf5; margin:-2.5px; font-size:30px;">B</span>
-        <span style="color:#de5246; margin:-2.5px; font-size:30px;">o</span>
-        <span style="color:#ffce44; margin:-2.5px; font-size:30px;">o</span>
-        <span style="color:#4c8bf5; margin:-2.5px; font-size:30px;">g</span>
-        <span style="color:#1aa260; margin:-2.5px; font-size:30px;">g</span>
-        <span style="color:#de5246; margin:-2.5px; font-size:30px;">l</span>
-        <span style="color:#4c8bf5; font-size:30px;">e</span>
-        <!-- <span style="color: #00FFAB">Booggle</span> -->
+      <a class="navbar-brand" href="{% url "search" %}">
+        <span class="colorBlue">B</span>
+        <span class="colorRed">o</span>
+        <span class="colorYellow">o</span>
+        <span class="colorBlue">g</span>
+        <span class="colorGreen">g</span>
+        <span class="colorRed">l</span>
+        <span class="colorBlue">e</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,7 +32,7 @@
             
             {% if request.user.is_authenticated %}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle navUser" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <b>Hi, {{ request.user.username }}</b>
                     </a>
                     <ul class="dropdown-menu">

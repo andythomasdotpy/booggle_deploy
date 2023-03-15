@@ -5,6 +5,8 @@
 .main-img {
     width: 200px;
     border-radius: 50%;
+    position: relative;
+    z-index: 1;
 }
 
 .form {
