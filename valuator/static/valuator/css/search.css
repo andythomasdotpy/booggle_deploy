@@ -79,6 +79,15 @@ input:-webkit-autofill:active{
     text-decoration: underline;
 }
 
+/* .containerCard{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+} */
 
 @media (max-width: 500px) {
     .main-img {
