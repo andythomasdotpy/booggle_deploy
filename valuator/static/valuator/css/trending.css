@@ -31,14 +31,10 @@ footer > div{
 .trendingCard > img {
     max-width: 100%;
     max-height: 100vh;
-    /* border-radius: 8px; */
-    /* box-shadow: 0 8px 17px 3px rgb(131, 130, 130); */
-    /* box-shadow: 0 8px 17px 3px rgb(169, 167, 167); */
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 20px;
     margin-bottom: 50px;
-    /* border: 1px solid black; */
 }
 
 .item-div {
@@ -69,10 +65,7 @@ bottle-title {
 }
 
 .trendingCard {
-    /* padding-top: 32px;
-    padding-bottom: 12px; */
     padding: 32px 10px 12px 10px;
-    /* border: 1px solid black; */
     border-radius: 10px;
     margin: 20px;
     box-shadow: 0 8px 17px 3px rgb(169, 167, 167);

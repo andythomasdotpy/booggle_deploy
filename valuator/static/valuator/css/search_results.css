@@ -9,16 +9,12 @@ button{
     min-height: calc(100vh - 400px);
 }
 
-/* .inline {
-    display: inline;
-    } */
 
 .link-button {
     background: rgb(37, 153, 241);
     border: none;
     border-radius: 5px;
     color: blue;
-    /* text-decoration: underline; */
     cursor: pointer;
     font-size: 1rem;
     font-family: serif;
@@ -58,8 +54,6 @@ button{
     }
 
 .link-div {
-    /* margin: 0; */
-    /* position: absolute; */
     top: 90%;
     left: auto;
     right: auto;
