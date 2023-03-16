@@ -90,9 +90,18 @@ table{
     padding: 8px 14px;
 }
 
+.mySpinnerDiv{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
 /* .mySpinner{
     display: flex;
-    align-items: center;
+    text-align: center;
+    justify-content: center;
 } */
 
 .hidden{

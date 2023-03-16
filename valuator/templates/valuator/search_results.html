@@ -10,27 +10,37 @@
 {% endblock %}
 
 {% block content %}
-    <div class="main-div">
-        <h3 class="mt-5 mb-5 text-center"> Select vintage to view pricing data </h3>
-        {% for bottles in search_bot_list %}
-            <div class="result-div">
-                <img class="bottle-image" src="{{bottles.2}}">
-                <div class="link-div">
-                    <form action="{% url "bottle-details" %}" method="POST"  class="inline">
-                        {% csrf_token %}
-                        <input type="hidden" name="bottle_name" value="{{ bottles.0 }}">
-                        <button type="submit" name="submit_param" value="submit_value" class="link-button">
-                        {{ bottles.0}}
-                        </button>
-                        <br>({{ bottles.1}} results)
-                    </form>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-    <footer>
-        <div>
-            <p>booggle-finance.com</p>
+
+    <div class="mySpinnerDiv">
+        <div class="spinner-border mySpinner" role="status">
+            <span class="visually-hidden"></span>
         </div>
-    </footer>
+    </div>
+
+    <div class="hidden section-formatting">
+        <div class="main-div ">
+            <h3 class="mt-5 mb-5 text-center"> Select vintage to view pricing data </h3>
+            {% for bottles in search_bot_list %}
+                <div class="result-div">
+                    <img class="bottle-image" src="{{bottles.2}}">
+                    <div class="link-div">
+                        <form action="{% url "bottle-details" %}" method="POST"  class="inline">
+                            {% csrf_token %}
+                            <input type="hidden" name="bottle_name" value="{{ bottles.0 }}">
+                            <button type="submit" name="submit_param" value="submit_value" class="link-button">
+                            {{ bottles.0}}
+                            </button>
+                            <br>({{ bottles.1}} results)
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <footer>
+            <div>
+                <p>booggle-finance.com</p>
+            </div>
+        </footer>
+    </div>
+    <script src="{% static 'valuator/js/search_results.js' %}"></script>
 {% endblock %}

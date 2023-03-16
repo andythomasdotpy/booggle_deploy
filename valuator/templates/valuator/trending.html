@@ -12,26 +12,36 @@
 
 
 {% block content %}
-    <div class="container mt-5 text-center">
-        <h1 id="main-heading">Trending</h1>
-    </div>
-    <div class="container-fluid mt-5 container-spacing">
-        <div class="row justify-content-md-center mb-5">
-            {% for bottle, url in all_bottles.items %} 
-                <div class="col-lg-4 col-md-6 col-sm-6 text-center">
-                    <a href="bottle_details_trending/{{bottle}}">
-                        <div class="trendingCard">
-                            <img src="{{ url }}" >
-                            <p>{{bottle}}</p>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
+    
+    <div class="mySpinnerDiv">
+        <div class="spinner-border mySpinner" role="status">
+            <span class="visually-hidden"></span>
         </div>
     </div>
-    <footer>
-        <div>
-            <p>booggle-finance.com</p>
+
+    <div class="section-formatting hidden">
+        <div class="container mt-5 text-center ">
+            <h1 id="main-heading">Trending</h1>
         </div>
-    </footer>
+        <div class="container-fluid mt-5 container-spacing">
+            <div class="row justify-content-md-center mb-5">
+                {% for bottle, url in all_bottles.items %} 
+                    <div class="col-lg-4 col-md-6 col-sm-6 text-center">
+                        <a class="aTagCard" href="bottle_details_trending/{{bottle}}">
+                            <div class="trendingCard">
+                                <img src="{{ url }}" >
+                                <p>{{bottle}}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <footer>
+            <div>
+                <p>booggle-finance.com</p>
+            </div>
+        </footer>
+    </div>
+    <script src="{% static 'valuator/js/trending.js' %}"></script>
 {% endblock %}

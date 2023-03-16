@@ -87,3 +87,15 @@ bottle-title {
 .bottle-info-anchortag{
     border: 1px solid black;
 }
+
+.mySpinnerDiv{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
