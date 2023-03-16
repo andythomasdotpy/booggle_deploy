@@ -28,3 +28,22 @@ nav div a .colorYellow{
 nav div a .colorGreen{
     color:#1aa260;
 }
+
+.fixed-footer{
+    width: 100%;
+    position: fixed;        
+    background: rgb(242, 239, 239);
+    padding: 12px 0;
+    color: rgb(132, 128, 128);
+    text-align: center;
+    height: 50px;
+    font-size: 12px;
+}
+
+.fixed-header{
+    top: 0;
+}
+
+.fixed-footer{
+    bottom: 0;
+}

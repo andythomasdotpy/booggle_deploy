@@ -24,6 +24,10 @@ footer > div{
     padding-top: 22px;
 }
 
+footer > div > p{
+    text-align: center;
+}
+
 #main-heading{
     font-weight: 500px;
 }

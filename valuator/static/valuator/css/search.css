@@ -91,6 +91,7 @@ input:-webkit-autofill:active{
     text-align: center;
 } */
 
+
 @media (max-width: 500px) {
     .main-img {
         width: 185px;

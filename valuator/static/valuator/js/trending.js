@@ -8,7 +8,7 @@ window.addEventListener("load", (event) => {
     // hide main-div
     // unhide spinner
 
-document.querySelector('.aTagCard').addEventListener('click', exiting)
+document.querySelector('#aTagCard').addEventListener('click', exiting)
 
 function exiting() {
     document.querySelector('.mySpinnerDiv').classList.toggle('hidden')
