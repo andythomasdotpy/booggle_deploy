@@ -11,6 +11,7 @@ window.addEventListener("load", (event) => {
 document.querySelector('#aTagCard').addEventListener('click', exiting)
 
 function exiting() {
-    document.querySelector('.mySpinnerDiv').classList.toggle('hidden')
-    document.querySelector('.section-formatting').classList.toggle('hidden')
+    console.log('klasdjfkljdksljf')
+    document.querySelector('.mySpinnerDiv').classList.remove('hidden')
+    document.querySelector('.section-formatting').classList.add('hidden')
 }
