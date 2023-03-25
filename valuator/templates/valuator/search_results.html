@@ -27,9 +27,9 @@
                         <form action="{% url "bottle-details" %}" method="POST"  class="inline">
                             {% csrf_token %}
                             <input type="hidden" name="bottle_name" value="{{ bottles.0 }}">
-                            <a type="submit" name="submit_param" value="submit_value" class="link-button">
+                            <button type="submit" name="submit_param" value="submit_value" class="link-button">
                             {{ bottles.0}}
-                            </a>
+                            </button>
                             <br>({{ bottles.1}} results)
                         </form>
                     </div>
