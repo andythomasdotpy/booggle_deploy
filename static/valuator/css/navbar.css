@@ -54,27 +54,20 @@ nav div a .colorGreen{
 }
 
 .logoImg{
-    width: 173; 
-    height: 30;
+    width: 144.5px; 
+    height: 28px;
 }
 
 @media (max-width: 1100px){
     .logoImg{
-        width: 144.5px;
-        height: 25px;
+        width: 115.5px;
+        height: 23px;
     }
 }
 
-@media (max-width: 800px){
+/* @media (max-width: 800px){
     .logoImg{
         width: 115px;
-        height: 20px;
-    }
-}
-/* 
-@media (max-width: 500px){
-    .logoImg{
-        width: 144.5px;
-        height: 15px;
+        height: 23px;
     }
 } */
