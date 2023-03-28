@@ -9,6 +9,13 @@
     z-index: 1;
 }
 
+.main-img-logo {
+    width: 400px;
+    /* border-radius: 50%; */
+    position: relative;
+    z-index: 1;
+}
+
 .form {
     display: flex;
     flex-direction: row;
