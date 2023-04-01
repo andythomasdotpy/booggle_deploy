@@ -11,6 +11,7 @@ window.addEventListener("load", (event) => {
 document.querySelector('.link-button').addEventListener('click', exiting)
 
 function exiting() {
+    console.log('exiting')
     document.querySelector('.mySpinnerDiv').classList.remove('hidden')
     document.querySelector('.section-formatting').classList.add('hidden')
 }
