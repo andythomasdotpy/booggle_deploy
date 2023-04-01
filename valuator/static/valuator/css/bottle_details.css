@@ -110,6 +110,14 @@ table{
     display: none;
 }
 
+.hoverAddSpan{
+    opacity: 0;
+}
+
+.hoverAddSpan:hover{
+    opacity: 1;
+}
+
 @media (max-width: 575px){
     .section-formatting{
         width: 100%;
