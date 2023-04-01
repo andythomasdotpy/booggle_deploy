@@ -12,6 +12,13 @@
 
 
 {% block content %}
+
+    <div class="mySpinnerDiv hidden">
+        <div class="spinner-border mySpinner" role="status">
+            <span class="visually-hidden"></span>
+        </div>
+    </div>
+
     <div class="form-div container mt-5">
         <div class="container1">
             <img class="main-img mb-4" src="{{ single_bottle.photo_url }}" alt="{{ single_bottle.actual_bottle }}" >
@@ -28,4 +35,5 @@
         </p>
     </div>
 
+    <script src="{% static 'valuator/js/search.js' %}"></script>
 {% endblock %}
