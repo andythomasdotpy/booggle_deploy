@@ -5,6 +5,7 @@ body{
 a{
     text-decoration: none;
     color: black;
+    cursor: default;
 }
 
 .trendingCard > p{
@@ -77,12 +78,15 @@ bottle-title {
 
 .trendingCard:hover {
     box-shadow: 0 8px 10px 3px rgb(104, 102, 102);
+    cursor: pointer;
 }
 
 .container-spacing {
     padding-right: 40px;
     padding-left: 40px;
 }
+
+
 
 .nav-link:hover{
     text-decoration: underline;
