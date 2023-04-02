@@ -12,6 +12,7 @@ window.addEventListener("load", (event) => {
     document.querySelector('.section-formatting').classList.toggle('hidden')
   });
 
+
 document.querySelector('.aTagButtonDiv').addEventListener('click', error)
 
 function error() {
@@ -25,3 +26,11 @@ function error() {
         document.querySelector(".errorMsg").innerText = ""
     }
 }
+
+
+// document.querySelector('.aTagButtonDiv').addEventListener('mouseover', addFavText)
+
+// function addFavText() {
+//     console.log('hello')
+//     document.querySelector('.hoverAddSpan').innerHTML = "hello"
+// }

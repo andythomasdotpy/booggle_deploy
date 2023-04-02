@@ -79,7 +79,7 @@ table{
     color: black;
     /* background: rgb(89, 161, 244);
     color: white; */
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 50%;
     padding: 8px 14px;
 }
@@ -108,6 +108,14 @@ table{
 
 .hidden{
     display: none;
+}
+
+.hoverAddSpan{
+    opacity: 0;
+}
+
+.hoverAddSpan:hover{
+    opacity: 1;
 }
 
 @media (max-width: 575px){
