@@ -71,3 +71,7 @@ nav div a .colorGreen{
         height: 23px;
     }
 } */
+
+#widthAdjust {
+    max-width: 100%;
+}
