@@ -65,13 +65,7 @@ nav div a .colorGreen{
     }
 }
 
-/* @media (max-width: 800px){
-    .logoImg{
-        width: 115px;
-        height: 23px;
-    }
-} */
-
+/* Bootstrap override */
 #widthAdjust {
     max-width: 100%;
 }
