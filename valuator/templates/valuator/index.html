@@ -7,26 +7,26 @@
 {% endblock %}
 
 {% block css_styles %}
-    <link rel="stylesheet" href="{% static "valuator/index.css" %}">
+    <link rel="stylesheet" href="{% static "valuator/css/index.css" %}">
 {% endblock %}
 
 
-{% block context %}
-<div class="container">
-    <div class="container mt-5 mb-5 text-center">
-        <h1>🔥Trending🔥</h1>
+{% block content %}
+    <div class="container">
+        <div class="container mt-5 mb-5 text-center">
+            <h1>🔥Trending🔥</h1>
+        </div>
+        <div class="row mb-5">
+            {% for bottle, url in all_bottles.items %}
+                <div class="container col-lg-3 col-md-3 text-center img-title-div mt-2 mb-2">
+                    <a href="bottle_details_trending/{{bottle}}">
+                        <div class="div-border">
+                                <img src="{{ url }}" class="img-detail pt-2 pb-1">
+                                <p>{{ bottle }}</p>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-    <div class="row mb-5">
-        {% for bottle, url in all_bottles.items %}
-            <div class="container col-lg-3 col-md-3 text-center img-title-div mt-2 mb-2">
-                <a href="bottle_details_trending/{{bottle}}">
-                    <div class="div-border">
-                            <img src="{{ url }}" class="img-detail pt-2 pb-1">
-                            <p>{{ bottle }}</p>
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
-    </div>
-  </div>
 {% endblock %}

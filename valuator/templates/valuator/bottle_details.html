@@ -6,28 +6,41 @@
 {% endblock %}
 
 {% block css_styles %}
-    <link rel="stylesheet" href="{% static "valuator/bottle_details.css" %}">
+    <link rel="stylesheet" href="{% static "valuator/css/bottle_details.css" %}">
 {% endblock %}
 
-{% block context %}
-    <section class="section-formatting container-fluid">
+{% block content %}
+    <div class="mySpinnerDiv">
+        <div class="spinner-border mySpinner" role="status">
+            <span class="visually-hidden"></span>
+
+        </div>
+    </div>
+
+    <section class="section-formatting container-fluid hidden">
         <div class="text-center bottle-image">
             <h1>{{ sales_data_list.0.0 }}</h1>
-            <img src="{{ sales_data_list.0.3 }}" alt="Main Image">
+            <img src="{{ sales_data_list.0.3 }}" alt="Main Image"><br>
+            <div class="aTagButtonDiv">
+                <a class="favButton" href="#">+</a>
+                <span class="hoverAddSpan">Add to favs</span>
+                <p class="errorMsg"> </p>
+            </div>
         </div>
         <div class="section-chart container-fluid">
             <div class="text-center mt-4">
-                <p>Trouble viewing chart on mobile? Try rotating your phone 🔄</p>
+                <p>Trouble viewing chart on mobile? Rotating your phone may help 🔄</p>
             </div>
             {{ chart|safe }}
         </div>
         <div class="section-chart container-fluid">
             <div class="text-center mt-4">
-                <p>Trouble viewing chart on mobile? Try rotating your phone 🔄</p>
+                <p>Trouble viewing on mobile? Rotating your phone may help 🔄</p>
+                {{ chart_1|safe }}
             </div>
-            {{ chart_1|safe }}
+            
         </div>
-        <div class="prices-chart container-fluid">
+        <div class="prices-chart container-fluid text-center">
             <h3> All Sales </h3>
             <table>
                 {% for sale in sales_data_list %}
@@ -40,4 +53,5 @@
             </table>
         </div>
     </section>
+    <script src="{% static 'valuator/js/main.js' %}"></script>
 {% endblock %}

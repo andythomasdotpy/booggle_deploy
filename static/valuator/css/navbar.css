@@ -1,0 +1,77 @@
+/* Booggle logo top left navbar is sytled in navbar.html */
+
+body #navColor{
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+}
+
+.navbar-brand span{
+    margin:-2.5px; 
+    font-size:30px; 
+    font-weight: 400;
+}
+
+nav div a .colorBlue{
+    color:#4c8bf5;
+}
+
+nav div a .colorRed{
+    color:#de5246;
+}
+
+nav div a .colorYellow{
+    color:#ffce44;
+}
+
+nav div a .colorGreen{
+    color:#1aa260;
+}
+
+.fixed-footer{
+    width: 100%;
+    position: fixed;        
+    background: rgb(94	158	233	);
+    padding: 12px 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 50px;
+    font-size: 12px;
+    z-index: 1;
+}
+
+.fixed-header{
+    top: 0;
+}
+
+.fixed-footer{
+    bottom: 0;
+}
+
+.pStyle{
+    padding-top: 3px;
+}
+
+.logoImg{
+    width: 144.5px; 
+    height: 28px;
+}
+
+@media (max-width: 1100px){
+    .logoImg{
+        width: 115.5px;
+        height: 23px;
+    }
+}
+
+/* @media (max-width: 800px){
+    .logoImg{
+        width: 115px;
+        height: 23px;
+    }
+} */
+
+#widthAdjust {
+    max-width: 100%;
+}

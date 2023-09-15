@@ -10,6 +10,10 @@ DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
 
+STATICFILES_DIRS = [
+   os.path.join(BASE_DIR, "static"),
+   ]
+
 # HTTPS settings
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True

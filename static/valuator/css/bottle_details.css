@@ -1,0 +1,133 @@
+img {
+    width: 300px;
+    height: 300px;
+    margin: 5% 0 8px;
+}
+
+/* .bottle-image h1 {
+    display: table-cell; 
+    vertical-align: middle;
+} */
+
+
+table, th, td {
+    border: 2px solid black;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottle-image > img{
+    /* box-shadow: 5px 5px 21px 5px rgb(195, 192, 192);
+    border-radius: 10px; */
+    margin-bottom: 20px;
+}
+
+.aTagButtonDiv{
+    width: 300px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.errorMsg{
+    height: 10px;
+    margin-top: 7px;
+    color: red;
+}
+
+.section-formatting{
+    width: 90%;
+}
+
+.bottle-image {
+    border-bottom: solid 2px;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+}
+
+.main-heading {
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    font-size: 1.25rem;
+}
+
+.section-chart {
+    border-bottom: solid 2px black;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+}
+
+
+.prices-chart {
+    padding-bottom: 3rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5%;
+}
+
+.favButton{
+    text-decoration: none;
+    color: black;
+    /* background: rgb(89, 161, 244);
+    color: white; */
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 8px 14px;
+}
+
+.favButton:hover{
+    text-decoration: none;
+    /* background: rgb(134, 186, 245);
+    color: white;
+    border-radius: 6px; */
+    padding: 8px 14px;
+}
+
+.mySpinnerDiv{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/* .mySpinner{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+} */
+
+.hidden{
+    display: none;
+}
+
+.hoverAddSpan{
+    opacity: 0;
+}
+
+.hoverAddSpan:hover{
+    opacity: 1;
+}
+
+@media (max-width: 575px){
+    .section-formatting{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .section-chart{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

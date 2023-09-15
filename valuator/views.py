@@ -6,7 +6,9 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
 
-from.models import SearchInput, ActualBottle
+
+from .forms import UserRegistrationForm
+from .models import SearchInput, ActualBottle
 from .operations.bot_search_results import bot_find_search_results
 from .operations.bot_scrape_data import bottle_results_bot
 from .operations.create_charts_func import scatter_plot_function, line_chart_function, seaborn_chart
@@ -16,7 +18,13 @@ from .operations.create_charts_func import scatter_plot_function, line_chart_fun
 
 def search(request):
     # return HttpResponse("You are at home...")
-    return render(request, "valuator/search.html")
+    all_bottles = ActualBottle.objects.all().order_by('-date_created')
+    single_bottle = all_bottles[:1][0]
+    print(single_bottle.photo_url)
+    
+    context = {"single_bottle": single_bottle}
+
+    return render(request, "valuator/search.html", context)
 
 
 class SearchResultsView(View):
@@ -81,7 +89,7 @@ def trending(request):
 
     for bottles in all_bottles:
         dict_5_no_dups[bottles.actual_bottle] = bottles.photo_url
-        if len(dict_5_no_dups) >= 4:
+        if len(dict_5_no_dups) >= 12:
             break
 
     print()
@@ -93,7 +101,7 @@ def trending(request):
     context = {"all_bottles": dict_5_no_dups}
 
     # return render(request, "valuator/trending.html", context=context)
-    return render(request, "valuator/index.html", context=context)
+    return render(request, "valuator/trending.html", context=context)
 
 
 
@@ -103,6 +111,7 @@ def bottle_details_trending(request, mid):
 
     # Add actual bottle lookup to database
     actual = ActualBottle()
+    print(actual)
     actual.actual_bottle = mid.title()
     actual.photo_url = sales_data_list[0][3]
     actual.date_created = datetime.now()
@@ -153,3 +162,69 @@ def search_results_popular(request, popular):
 
 class PostTemplateView(TemplateView):
     template_name = "valuator/spinner.html"
+
+
+def register(request):
+    if request.method == "POST":
+        user_form = UserRegistrationForm(request.POST)
+
+        if user_form.is_valid():
+
+            # Create new user object but don't save yet. Check passwords.
+            new_user = user_form.save(commit=False)
+
+            # Set password
+            new_user.set_password(user_form.cleaned_data["password_1"])
+            new_user.save()
+            content = {"user_form": user_form}
+
+            return render(request, "account/register_done.html", content)
+
+    else:
+        user_form = UserRegistrationForm()
+        {"user_form": user_form}
+
+    return render(request, "account/register.html", {"user_form": user_form})
+
+
+def favorites(request):
+    # # Obtain logged in user_id
+    # loggedin_user = request.user.id
+
+    # # Query for all likes associated with user_id
+    # posts_liked_by_user = Likes.objects.filter(user_id=loggedin_user)
+
+    # # Create blank list to add posts liked by user
+    # posts_list = list()
+
+    # # Iterate through likes, search if like is associated with logged in user, create list of dicts adding liked date from likes table to user info
+    # for like in posts_liked_by_user:
+    #     tmp_dict = dict()
+    #     try:
+    #         single_post = Post.objects.get(pk=like.post_id)
+
+    #         tmp_dict["id"] = single_post.id
+    #         tmp_dict["title"] = single_post.title
+    #         tmp_dict["author"] = single_post.author
+    #         tmp_dict["slug"] = single_post.slug
+    #         tmp_dict["image"] = single_post.image
+    #         tmp_dict["date_time_like"] = like.date
+    #         posts_list.append(tmp_dict)
+    #     except:
+    #         pass
+    
+    # sorted_list_by_liked_date = sorted(posts_list, reverse=True, key=lambda d: d['date_time_like']) 
+
+    # context = {"posts_list": sorted_list_by_liked_date}
+    context = {}
+
+
+    return render(request, "valuator/favorites.html", context)
+
+
+def favorites_add(request):
+    # Obtain User Id
+    # Obtain Post Id
+    # Add new row to likes table with post id and user id
+    # 
+    return redirect("search")

@@ -7,24 +7,36 @@
 {% endblock %}
 
 {% block css_styles %}
-    <link rel="stylesheet" href="{% static "valuator/trending.css" %}">
+    <link rel="stylesheet" href="{% static "valuator/css/trending.css" %}">
 {% endblock %}
 
 
-{% block context %}
-<div class="container-fluid">
-    <div class="container mt-5 text-center">
-        <h1>🔥Trending🔥</h1>
+{% block content %}
+    
+    <div class="mySpinnerDiv">
+        <div class="spinner-border mySpinner" role="status">
+            <span class="visually-hidden"></span>
+        </div>
     </div>
-    <div class="row all-blocks">
-        {% for bottle, url in all_bottles.items %} 
-            <div class="col-lg-3 col-md-3 col-sm-6 text-center each-item">
-                <a href="bottle_details_trending/{{bottle}}">
-                    <img src="{{ url }}" class="img-main">
-                    <p class="text-center bottle-title">{{ bottle }}</p>
-                </a>
+
+    <div class="section-formatting hidden">
+        <div class="container mt-5 text-center ">
+            <h1 id="main-heading">Trending</h1>
+        </div>
+        <div class="container-fluid mt-5 container-spacing">
+            <div class="row justify-content-md-center mb-5">
+                {% for bottle, url in all_bottles.items %} 
+                    <div class="col-lg-4 col-md-6 col-sm-6 text-center">
+                            <a id="aTagCard" href="bottle_details_trending/{{bottle}}">
+                                <div class="trendingCard">
+                                    <img src="{{ url }}" >
+                                    <p>{{bottle}}</p>
+                                </div>
+                            </a>
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
+        </div>
     </div>
-</div>
+    <script src="{% static 'valuator/js/trending.js' %}"></script>
 {% endblock %}

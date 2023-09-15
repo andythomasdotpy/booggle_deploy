@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Booggle | Register Complete
+{% endblock %}
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static "valuator/css/register.css" %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container text-center main-div loggedOut">
+        <h1>Welcome!</h1>
+        <p>Your account has been created. Click here to <a href="{% url "login" %}">login</a></p>
+    </div>
+{% endblock %}

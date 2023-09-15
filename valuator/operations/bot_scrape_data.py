@@ -1,12 +1,16 @@
 import datetime
 import requests
 from bs4 import BeautifulSoup
-from .functions import search_to_url, name_filter_auto
+from .functions import search_to_url, name_filter_auto, convert
 
 # Take user input and return all resulsts that match
 def bottle_results_bot(bottle_input):
 
-    x_rate = 1.22
+    try:
+        x_rate = convert()
+        print(f"bot_scrape: {x_rate}")
+    except:
+        x_rate = 1.22
 
     # Convert search results to all lowercase
     bottle_input.lower()

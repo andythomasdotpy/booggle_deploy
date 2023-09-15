@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Lemonpy | Welcome
+{% endblock %}
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static "valuator/css/register.css" %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container text-center main-div loggedOut">
+        <p>You've succesfully logged out, thanks for visting Booggle!</p>
+        <br>
+        <h5><a href="{% url "login"%}">Login</a></h5>
+    </div>
+{% endblock %}

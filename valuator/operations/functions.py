@@ -1,4 +1,6 @@
 from decouple import config
+import requests
+
 
 # Convert search term to url dynamically
 def search_to_url(search):
@@ -46,3 +48,13 @@ def slugify(text):
         elif letter == " ":
             slug += "+"
     return slug
+
+
+def convert():
+    endpoint = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/gbp.json"
+    response = requests.get(endpoint)
+    data = response.json()
+    print(data["gbp"]["usdt"])
+    return data["gbp"]["usdt"]
+
+
